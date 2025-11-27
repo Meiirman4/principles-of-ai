@@ -1,0 +1,21 @@
+# Virtual environments
+venv/
+.venv/
+
+# PyCharm
+.idea/
+*.iml
+
+# Python cache
+__pycache__/
+
+# macOS
+.DS_Store
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Models (optional to ignore)
+models/*.h5
+models/*.pb
+models/*.onnx
