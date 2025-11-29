@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DragoDiet</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; background: #e0f7fa; padding: 20px; }
+        .card { background: white; padding: 20px; border-radius: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        
+        img#dragon { width: 200px; height: 200px; object-fit: contain; transition: transform 0.3s; }
+        
+        /* Bar Styles */
+        .bar-container { background: #ddd; height: 20px; border-radius: 10px; margin: 10px 0; overflow: hidden; position: relative; }
+        
+        /* Health is Green/Red */
+        .hp-bar { height: 100%; background: #4caf50; transition: width 0.5s; }
+        
+        /* XP is Blue */
+        .xp-bar { height: 100%; background: #2196F3; transition: width 0.5s; }
+        
+        .btn { background: #ff7043; color: white; padding: 15px 30px; border-radius: 50px; display: inline-block; margin-top: 20px; cursor: pointer; font-weight: bold; }
+        input[type="file"] { display: none; }
+        
+        /* Stats Text */
+        .stats-row { display: flex; justify-content: space-between; font-weight: bold; margin-bottom: 5px;}
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Lvl <span id="lvl">{{ stats.level }}</span> Dragon</h1>
+        
+        <div class="stats-row">
+            <span>Health</span>
+            <span><span id="hp">{{ stats.health }}</span>%</span>
+        </div>
+        <div class="bar-container">
+            <div id="health-bar" class="hp-bar" style="width: {{ stats.health }}%;"></div>
+        </div>
+
+        <div class="stats-row">
+            <span>XP (Next Lvl)</span>
+            <span id="xp-text">{{ stats.xp % 100 }} / 100</span>
+        </div>
+        <div class="bar-container">
+            <div id="xp-bar" class="xp-bar" style="width: {{ stats.xp % 100 }}%;"></div>
+        </div>
+
+        <br>
+
+        <img id="dragon" src="/static/dragon_neutral.png" onerror="this.src='https://cdn-icons-png.flaticon.com/512/371/371669.png'">
+        
+        <p id="msg" style="height: 40px; font-weight: bold;">I am hungry!</p>
+
+        <label class="btn">
+            📸 Feed Me
+            <input type="file" id="cam" accept="image/*" capture="environment">
+        </label>
+    </div>
+
+    <script>
+        const cam = document.getElementById('cam');
+        const msg = document.getElementById('msg');
+        const dragon = document.getElementById('dragon');
+        const healthBar = document.getElementById('health-bar');
+        const xpBar = document.getElementById('xp-bar');
+
+        cam.addEventListener('change', async (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            msg.innerText = "Analyzing... 🥗🍔";
+            msg.style.color = "gray";
+            
+            const formData = new FormData();
+            formData.append('image', file);
+
+            try {
+                const res = await fetch('/feed', { method: 'POST', body: formData });
+                const data = await res.json();
+
+                if (data.error) {
+                    msg.innerText = "⚠️ " + data.error;
+                    msg.style.color = "red";
+                    return;
+                }
+
+                // Update UI Text
+                let hpSign = data.hp_change >= 0 ? "+" : "";
+                let xpSign = "+" + data.xp_change;
+                msg.innerHTML = `Ate <b>${data.food}</b>!<br> ${hpSign}${data.hp_change} HP | ${xpSign} XP`;
+                msg.style.color = "black";
+
+                // Update Bars
+                document.getElementById('hp').innerText = data.stats.health;
+                document.getElementById('lvl').innerText = data.stats.level;
+                document.getElementById('xp-text').innerText = (data.stats.xp % 100) + " / 100";
+                
+                healthBar.style.width = data.stats.health + "%";
+                xpBar.style.width = (data.stats.xp % 100) + "%";
+                
+                // Color Health Bar based on danger
+                if (data.stats.health < 30) healthBar.style.background = "red";
+                else healthBar.style.background = "#4caf50";
+
+                // Reaction Images (Make sure you have these files!)
+                if (data.mood === 'happy') {
+                    dragon.src = "/static/dragon_happy.png";
+                    dragon.style.transform = "scale(1.2)";
+                } else if (data.mood === 'sick') {
+                    dragon.src = "/static/dragon_sick.png";
+                    dragon.style.transform = "rotate(10deg)";
+                }
+
+                setTimeout(() => {
+                    dragon.src = "/static/dragon_neutral.png";
+                    dragon.style.transform = "scale(1)";
+                }, 3000);
+
+            } catch (err) {
+                msg.innerText = "Error connecting to server";
+                console.error(err);
+            }
+        });
+    </script>
+</body>
+</html>

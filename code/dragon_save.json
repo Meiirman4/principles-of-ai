@@ -1,0 +1,51 @@
+{
+    "stats": {
+        "health": 10,
+        "xp": 0,
+        "level": 1
+    },
+    "history": [
+        {
+            "food": "cheeseburger",
+            "score": -20,
+            "hash": "7d672fb9df302d4c899c994ebdd5bbab",
+            "time": "2025-11-29 09:04:12.793007"
+        },
+        {
+            "food": "guacamole",
+            "score": 0,
+            "hash": "1de560a7fb8eb88dbec951c24691a594",
+            "time": "2025-11-29 09:04:17.364248"
+        },
+        {
+            "food": "guacamole",
+            "score": 0,
+            "hash": "d98a6654c01b8b975721c04ba13250b0",
+            "time": "2025-11-29 09:04:56.727070"
+        },
+        {
+            "food": "potpie",
+            "score": 0,
+            "hash": "7dbe5d8c2523af9a363f92fd9594a95d",
+            "time": "2025-11-29 09:06:23.231692"
+        },
+        {
+            "food": "carbonara",
+            "score": 0,
+            "hash": "97b83d5d172d4b930c7db0611baea311",
+            "time": "2025-11-29 09:07:00.899744"
+        },
+        {
+            "food": "cheeseburger",
+            "score": -20,
+            "hash": "00bb4f2fec626ae09fa5f63fa788461d",
+            "time": "2025-11-29 09:53:14.563780"
+        },
+        {
+            "food": "head_cabbage",
+            "score": 0,
+            "hash": "1a61f5d58a377b27ee0a84caa3fbae13",
+            "time": "2025-11-29 09:53:38.053229"
+        }
+    ]
+}
