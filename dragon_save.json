@@ -1,8 +1,170 @@
 {
     "stats": {
-        "health": 50,
-        "xp": 0,
-        "level": 1
+        "health": 0,
+        "xp": 345,
+        "level": 4
     },
-    "history": []
+    "history": [
+        {
+            "food": "jersey",
+            "hp_change": 0,
+            "xp_change": 5,
+            "hash": "62661e05ee352b56bdf43444941d3596",
+            "time": "2025-11-29 14:12:39.858823"
+        },
+        {
+            "food": "digital_clock",
+            "hp_change": 0,
+            "xp_change": 5,
+            "hash": "cb9099c67abaf8f7f7db4e70fa7290f0",
+            "time": "2025-11-29 14:12:39.905083"
+        },
+        {
+            "food": "espresso",
+            "hp_change": 0,
+            "xp_change": 5,
+            "hash": "79c78f8ba8096edc8c5c479e3a66f8c0",
+            "time": "2025-11-29 14:15:20.638637"
+        },
+        {
+            "food": "corn",
+            "hp_change": 0,
+            "xp_change": 5,
+            "hash": "9131872aee46c39d8fa93f8516304fb7",
+            "time": "2025-11-29 14:15:23.090749"
+        },
+        {
+            "food": "guacamole",
+            "hp_change": 0,
+            "xp_change": 5,
+            "hash": "f27a81121cff3e6d865909ec630929ef",
+            "time": "2025-11-29 14:15:59.067194"
+        },
+        {
+            "food": "guacamole",
+            "hp_change": 0,
+            "xp_change": 5,
+            "hash": "d98a6654c01b8b975721c04ba13250b0",
+            "time": "2025-11-29 14:16:04.363146"
+        },
+        {
+            "food": "cauliflower",
+            "hp_change": 0,
+            "xp_change": 5,
+            "hash": "c65bb76b3a7a6612507c9e2050dcf3bd",
+            "time": "2025-11-29 14:16:49.732052"
+        },
+        {
+            "food": "pretzel",
+            "hp_change": 0,
+            "xp_change": 5,
+            "hash": "965bcc692749566277ef8c9e57dd32d1",
+            "time": "2025-11-29 14:17:22.473545"
+        },
+        {
+            "food": "banana",
+            "hp_change": 10,
+            "xp_change": 10,
+            "hash": "19650270b10cd119f97300cc9ba63f04",
+            "time": "2025-11-29 14:18:38.981577"
+        },
+        {
+            "food": "Granny_Smith",
+            "hp_change": 0,
+            "xp_change": 5,
+            "hash": "580771e345aa5d6759694a8de5538a12",
+            "time": "2025-11-29 14:20:10.779273"
+        },
+        {
+            "food": "trifle",
+            "hp_change": 0,
+            "xp_change": 5,
+            "hash": "ca4b6f5e7bef6d99e86049cfe2c8ec05",
+            "time": "2025-11-29 14:20:45.488922"
+        },
+        {
+            "food": "chocolate_sauce",
+            "hp_change": -5,
+            "xp_change": 20,
+            "hash": "293f8d9e31f76f176a2dedf4f8d39340",
+            "time": "2025-11-29 14:21:07.074561"
+        },
+        {
+            "food": "strawberry",
+            "hp_change": 15,
+            "xp_change": 5,
+            "hash": "77847591e35c1f81c66262d3d466deb7",
+            "time": "2025-11-29 14:22:56.110986"
+        },
+        {
+            "food": "bell_pepper",
+            "hp_change": 0,
+            "xp_change": 5,
+            "hash": "72fbc37b857eb295117519a864a05ed4",
+            "time": "2025-11-29 14:23:02.000878"
+        },
+        {
+            "food": "jersey",
+            "hp_change": 0,
+            "xp_change": 5,
+            "hash": "15df6d4fc4193f00ec645e07aaee6403",
+            "time": "2025-11-29 14:23:06.665381"
+        },
+        {
+            "food": "jersey",
+            "hp_change": 0,
+            "xp_change": 5,
+            "hash": "0c3b766aadd23763b6f204864bab31d5",
+            "time": "2025-11-29 14:23:15.928974"
+        },
+        {
+            "food": "broccoli",
+            "hp_change": 20,
+            "xp_change": 5,
+            "hash": "afff919d5cc58411dc1fd07fd90a0cc1",
+            "time": "2025-11-29 14:23:36.076044"
+        },
+        {
+            "food": "cheeseburger",
+            "hp_change": -15,
+            "xp_change": 40,
+            "hash": "fda608cdb21e6d8ae99f830580cb556c",
+            "time": "2025-11-29 14:30:46.401933"
+        },
+        {
+            "food": "cheeseburger",
+            "hp_change": -15,
+            "xp_change": 40,
+            "hash": "7e36a334faf40edee8d2aabf073ec8c8",
+            "time": "2025-11-29 14:31:24.889149"
+        },
+        {
+            "food": "cheeseburger",
+            "hp_change": -15,
+            "xp_change": 40,
+            "hash": "ebf27aad6beb47a7643b621ce650aec7",
+            "time": "2025-11-29 14:31:49.590100"
+        },
+        {
+            "food": "cheeseburger",
+            "hp_change": -15,
+            "xp_change": 40,
+            "hash": "5d44ed89864462009963d0e89f82f3e7",
+            "time": "2025-11-29 14:32:27.198511"
+        },
+        {
+            "food": "cheeseburger",
+            "hp_change": -15,
+            "xp_change": 40,
+            "hash": "72f48cd7e0c201fd1513e9f39ec9ff88",
+            "time": "2025-11-29 14:33:00.281522"
+        },
+        {
+            "food": "cheeseburger",
+            "hp_change": -15,
+            "xp_change": 40,
+            "hash": "7c2c3e32ca6a1041416729641f71a2fe",
+            "time": "2025-11-29 14:33:27.287137"
+        }
+    ]
 }
