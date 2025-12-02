@@ -11,6 +11,13 @@ app = FastAPI()
 UPLOAD_DIR = "uploads"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
+
+#mainpage
+@app.get("/", response_class=HTMLResponse)
+async def welcome(request: Request):
+    return templates.TemplateResponse("main.html", {"request": request})
+
+
 #upload & analyze endpoint
 @app.post("/meal/analyze")
 async def analyze_meal(
