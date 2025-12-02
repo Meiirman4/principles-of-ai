@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meal History</title>
+</head>
+<body>
+
+<h1>Meal History</h1>
+
+<a href="/">Back</a>
+
+<table border="1">
+<tr>
+    <th>Photo</th>
+    <th>Score</th>
+    <th>Date</th>
+</tr>
+
+{% for record in history %}
+<tr>
+    <td>
+        <img src="/uploads/{{ record[0].split('/')[-1] }}" width="120">
+    </td>
+    <td>{{ record[1] }}</td>
+    <td>{{ record[2] }}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+</body>
+</html>
